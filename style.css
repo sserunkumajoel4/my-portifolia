@@ -1,0 +1,472 @@
+/* Global Reset */
+html{
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Main Wrapper */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 50px;
+    background-image: linear-gradient(to top right, #020216, #00aaff);
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6f00;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 70px; /* Adjusted for navbar */
+}
+
+.sec1 img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sec1 img:hover {
+    transform: scale(1.05);
+}
+
+.sec2 {
+    max-width: 600px;
+    color: white;
+}
+
+.sec2 h2 {
+    font-size: 3rem;
+}
+
+.sec2 h3 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.sec2 .intro {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.buttons button {
+    background-color: #ff6f00;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buttons button a {
+    color: white;
+    text-decoration: none; /* Remove default underline */
+}
+
+.buttons button:hover {
+    background-color: #613306;
+    transform: scale(1.1);
+}
+
+/* About Me Section */
+.about-me {
+    width: 100%;
+    padding: 50px 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.my-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.follow {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.follow a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.follow a:hover {
+    color: #ff6f00;
+}
+
+.myabout {
+    max-width: 700px;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ff6f00;
+}
+
+.project p {
+    padding: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+/* Passion Section */
+.my-passion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.my-passion img {
+    width: 320px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.my-passion .sec2 {
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        margin-top: 90px; /* Adjusted for navbar */
+    }
+
+    .sec1 img {
+        width: 390px;
+    }
+
+    .sec2 h2 {
+        font-size: 2.5rem;
+    }
+
+    .sec2 h3 {
+        font-size: 1.8rem;
+    }
+
+    .sec2 .intro {
+        font-size: 1rem;
+    }
+
+    .buttons button {
+        font-size: 0.9rem;
+        padding: 10px 25px;
+    }
+
+    .about-me {
+        padding: 40px 10px;
+        flex-direction: column;
+    }
+
+    .project-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project {
+        max-width: 100%;
+    }
+}
+.site:hover{
+    background-color: blue;color: white;
+}
+/* Footer Styling */
+.footer {
+    width: 100%;
+    background-color: #1a1a2e; /* Darker shade to fit with the overall page */
+    color: #f1f1f1; /* Light text for contrast */
+    padding: 40px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-top: 3px solid #ff6f00; /* A brighter accent to tie in with the site theme */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-info, .footer-fun-facts {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-info h2, .footer-fun-facts h3 {
+    color: #ff6f00; /* Orange accent color for headers */
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links li a {
+    color: #f1f1f1; /* Light text color */
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links li a:hover {
+    color: #ff6f00; /* Change hover color to orange */
+    transform: scale(1.1);
+}
+
+.footer-fun-facts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-fun-facts ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    background-color: #000000;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #aaa; /* Light gray text for the footer bottom */
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info, .footer-fun-facts {
+        width: 90%;
+        text-align: center;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-links li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-info p {
+        font-size: 0.9rem;
+    }
+
+    .footer-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-fun-facts ul li {
+        font-size: 0.9rem;
+    }
+}
+/* Passion Section Styling */
+.my-passion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: #fff;
+    color: #333;
+    flex-wrap: wrap; /* Allow for wrapping in smaller screens */
+}
+
+.passion-image img {
+    width: 320px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.passion-text {
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .my-passion {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        text-align: center;
+    }
+
+    .passion-image img {
+        width: 100%; /* Make the image responsive */
+        max-width: 350px; /* Limit the max size of the image */
+        margin-bottom: 20px; /* Add some space below the image */
+    }
+
+    .passion-text {
+        width: 90%; /* Ensure text container is not too wide */
+        font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+
+    .my-passion p {
+        margin-bottom: 15px; /* Add space between paragraphs */
+    }
+}
+
+@media (max-width: 480px) {
+    .passion-text {
+        font-size: 0.95rem; /* Slightly smaller font on very small screens */
+    }
+
+    .passion-image img {
+        max-width: 300px; /* Reduce image size further */
+    }
+}
